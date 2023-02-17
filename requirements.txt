@@ -1,0 +1,12 @@
+-e git+https://github.com/wkentaro/bullet3.git@addUserDebugPoints#egg=pybullet
+-e git+https://github.com/wkentaro/scikit-robot.git@max_pos_accel#egg=scikit-robot
+-e git+https://github.com/wkentaro/pybullet_planning.git@collision_flag#egg=pybullet_planning
+gym
+imgviz
+loguru
+open3d
+opencv-python
+path
+scikit-image
+torch
+trimesh[easy]
