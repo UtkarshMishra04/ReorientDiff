@@ -1,6 +1,6 @@
 # ReorientDiff: Diffusion Model based Reorientation for Object Manipulation
 
-Utkarsh A. Mishra, Yongxin Chen
+Utkarsh A. Mishra and Yongxin Chen
 
 ## Abstract
 
@@ -29,6 +29,8 @@ The performance of the diffusion model is shown in the following figure:
 ![Diffusion Model](./images/all_reorient_results.png)
 
 ## Videos
+
+[![ReorientDiff](./images/thumbnail.png)](https://www.youtube.com/watch?v=U2l2QQYdoNY)
 
 
 ## Citation
