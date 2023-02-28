@@ -22,15 +22,17 @@ We then use the scene-task representation to condition the diffusion model:
 
 We evaluate our method on a set of YCB-objects and a suction gripper in simulation. The performance of the scene-task embedding network is shown in the following figure:
 
-![Scene-Task Embedding Network](./images/predictions.png)
+<p>
+  <img alt="Scene-Task Embedding Network" src="./images/predictions.png" width="75%">
+</p>
+
+<!-- ![Scene-Task Embedding Network](./images/predictions.png) -->
 
 The performance of the diffusion model is shown in the following figure:
 
 ![Diffusion Model](./images/all_reorient_results.png)
 
 ## Videos
-
-The following gifs show some experimental results:
 
 <p>
   <img alt="reorient1" src="./gifs/converted_1.gif" width="45%">
