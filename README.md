@@ -32,7 +32,24 @@ The performance of the diffusion model is shown in the following figure:
 
 The following gifs show some experimental results:
 
-![ReorientDiff](./gifs/converted_1.gif) ![ReorientDiff](./gifs/converted_2.gif) ![ReorientDiff](./gifs/converted_3.gif) ![ReorientDiff](./gifs/converted_4.gif) ![ReorientDiff](./gifs/converted_5.gif) ![ReorientDiff](./gifs/converted_6.gif) ![ReorientDiff](./gifs/converted_7.gif) ![ReorientDiff](./gifs/converted_8.gif)
+<p>
+  <img alt="reorient1" src="./gifs/converted_1.gif" width="45%">
+  <img alt="reorient2" src="./gifs/converted_2.gif" width="45%">
+</p>
+<p>
+  <img alt="reorient3" src="./gifs/converted_3.gif" width="45%">
+  <img alt="reorient4" src="./gifs/converted_4.gif" width="45%">
+</p>
+<p>
+  <img alt="reorient5" src="./gifs/converted_5.gif" width="45%">
+  <img alt="reorient6" src="./gifs/converted_6.gif" width="45%">
+</p>
+<p>
+  <img alt="reorient7" src="./gifs/converted_7.gif" width="45%">
+  <img alt="reorient8" src="./gifs/converted_8.gif" width="45%">
+</p>
+
+<!-- ![ReorientDiff](./gifs/converted_1.gif) ![ReorientDiff](./gifs/converted_2.gif) ![ReorientDiff](./gifs/converted_3.gif) ![ReorientDiff](./gifs/converted_4.gif) ![ReorientDiff](./gifs/converted_5.gif) ![ReorientDiff](./gifs/converted_6.gif) ![ReorientDiff](./gifs/converted_7.gif) ![ReorientDiff](./gifs/converted_8.gif) -->
 
 [![ReorientDiff](./images/thumbnail.png)](https://www.youtube.com/watch?v=U2l2QQYdoNY)
 
