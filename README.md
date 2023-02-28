@@ -1,4 +1,4 @@
-# ReorientDiff: Diffusion Models for Reorientation and Regrasping
+# ReorientDiff: Diffusion Model based Reorientation for Object Manipulation
 
 Utkarsh A. Mishra, Yongxin Chen
 
