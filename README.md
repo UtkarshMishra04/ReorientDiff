@@ -30,6 +30,10 @@ The performance of the diffusion model is shown in the following figure:
 
 ## Videos
 
+The following gifs show some experimental results:
+
+![ReorientDiff](./gifs/converted_1.gif) ![ReorientDiff](./gifs/converted_2.gif) ![ReorientDiff](./gifs/converted_3.gif) ![ReorientDiff](./gifs/converted_4.gif) ![ReorientDiff](./gifs/converted_5.gif) ![ReorientDiff](./gifs/converted_6.gif) ![ReorientDiff](./gifs/converted_7.gif) ![ReorientDiff](./gifs/converted_8.gif)
+
 [![ReorientDiff](./images/thumbnail.png)](https://www.youtube.com/watch?v=U2l2QQYdoNY)
 
 
