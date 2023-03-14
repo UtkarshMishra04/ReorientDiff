@@ -64,7 +64,7 @@ If you find this work useful in your research, please consider citing:
 @article{mishra2023reorientdiff,
   title={ReorientDiff: Diffusion Models for Reorientation and Regrasping},
   author={Mishra, Utkarsh A and Chen, Yongxin},
-  journal={arXiv preprint arXiv:2007.00687},
+  url={https://utkarshmishra04.github.io/ReorientDiff}
   year={2023}
 }
 ```
