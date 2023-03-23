@@ -2,7 +2,7 @@
 
 Utkarsh A. Mishra and Yongxin Chen
 
-Paper: [utkarshmishra04.github.io/docs/articles/ReorientDiff.pdf](https://utkarshmishra04.github.io/docs/articles/ReorientDiff.pdf)
+Paper: [https://arxiv.org/abs/2303.12700](https://arxiv.org/abs/2303.12700)
 
 ## Abstract
 
