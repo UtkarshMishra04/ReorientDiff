@@ -1,5 +1,0 @@
--r requirements.txt
-black
-hacking
-pre-commit
-tensorboard
