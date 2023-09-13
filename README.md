@@ -4,7 +4,7 @@ Utkarsh A. Mishra and Yongxin Chen
 
 Paper: [https://arxiv.org/abs/2303.12700](https://arxiv.org/abs/2303.12700)
 
-Skeleton Code Available: ["code" branch](https://github.com/UtkarshMishra04/ReorientDiff/tree/code)
+Code: Coming Soon ...
 
 ## Abstract
 
