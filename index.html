@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ReorientDiff | Diffusion Model based Reorientation for Object Manipulation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/academicons.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">ReorientDiff : Diffusion Model based Reorientation for Object Manipulation</h1>
+                    <h3 class="title is-4 conference-authors"><a target="_blank" href="#">In Submission</a></h3>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                          <a target="_blank" href="https://utkarshmishra04.github.io/">Utkarsh A. Mishra</a>,
+                        </span>
+                        <span class="author-block">
+                          <a target="_blank" href="https://yongxin.ae.gatech.edu/">Yongxin Chen</a>
+                        </span>
+
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Georgia Institute of Technology <br> 
+              <!-- <sup>*</sup>Equal Contribution -->
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" href="assets/2023_ReorientDiff.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+            <!-- Arxiv Link. -->
+            <span class="link-block">
+              <a target="_blank" href="#"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file"></i>
+                </span>
+                <span>ArXiv</span>
+              </a>
+            </span>
+
+            <!-- Video Link. -->
+            <span class="link-block">
+              <a target="_blank" href="#"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
+              </a>
+            </span>
+
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a target="_blank" href="#"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="subtitle has-text-centered">
+      </br>
+      TL;DR: Diffusion Models for language-conditioned multi-step object manipulation for precise object placement.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p style="font-size: 125%">
+            The ability to manipulate objects in a desired configurations is a fundamental requirement for robots to complete various practical applications. 
+            While certain goals can be achieved by picking and placing the objects of interest directly, object reorientation is needed for precise placement in most of the tasks. 
+            In such scenarios, the object must be reoriented and re-positioned into intermediate poses that facilitate accurate placement at the target pose. 
+            To this end, we propose a reorientation planning method, <b>ReorientDiff</b>, that utilizes a diffusion model-based approach. 
+            The proposed method employs both visual inputs from the scene, and goal-specific language prompts to plan intermediate reorientation poses. 
+            Specifically, the scene and language-task information are mapped into a joint scene-task representation feature space, which is subsequently leveraged to condition the diffusion model. 
+            The diffusion model samples intermediate poses based on the representation using classifier-free guidance and then uses gradients of learned feasibility-score models for implicit iterative pose-refinement. 
+            The proposed method is evaluated using a set of YCB-objects and a suction gripper, demonstrating a success rate of <b>96.5%</b> in simulation. 
+            Overall, our study presents a promising approach to address the reorientation challenge in manipulation by learning a conditional distribution, which is an effective way to move towards more generalizable object manipulation.
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <br>
+        <img src="assets/images/pitcher_drill.png" class="interpolation-image"
+               alt="" style="display: block; margin-left: auto; margin-right: auto" width="1200"/>
+        <br>
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          
+          <br>
+
+          <div class="content has-text-justified">
+            <br>
+          <span style="font-size: 125%">
+            <b>(a).</b> We construct the scene-task representation feature space by using pre-trained foundation model CLIP and a segmentation encoder: <br>
+          <br>
+        </div>
+
+          <img src="assets/images/embedding_training.png" class="interpolation-image"
+               alt="" style="display: block; margin-left: auto; margin-right: auto" width="1200"/>
+               <div class="content has-text-justified">
+                <br>
+
+          <span style="font-size: 125%">
+            <b>(b).</b> We then use the scene-task representation to condition the diffusion model:</span>
+          <br>
+
+          <img src="assets/images/forward_rev_process.png" class="interpolation-image"
+                alt="" style="display: block; margin-left: auto; margin-right: auto" width="1200"/>
+                <div class="content has-text-justified">
+                <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <!-- Generalization Videos -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Experiments</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Experiments-->
+<section class="section is-dark">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+          <!-- <h2 class="title is-3"><span
+            class="dvima">Experiments</span></h2>
+          <br> -->
+          <h3 class="title is-4"><span
+            class="dvima">Evaluating Scene Task representations
+          </span></h3>
+
+          <span style="font-size: 110%">
+            We evaluate our method on a set of YCB-objects and a suction gripper in simulation. The performance of the scene-task embedding network is shown in the following figure:
+            <img src="assets/images/predictions.png" class="interpolation-image"
+                alt="" style="display: block; margin-left: auto; margin-right: auto" width="600"/>
+                <div class="content has-text-justified">
+                <br>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+          <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column">
+                  <h3 class="title is-4"><span
+                    class="dvima">Diffusion Model Sampling performance
+                  </span></h3>
+                  <br>
+                  <img src="assets/images/all_reorient_results.png" class="interpolation-image"
+                alt="" style="display: block; margin-left: auto; margin-right: auto" width="1200"/>
+                <div class="content has-text-justified">
+                <br>
+          <br>
+          <br>
+        </div>
+        </div>
+      </div>
+    </div>
+
+          <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column">
+                  <h3 class="title is-4"><span
+                    class="dvima">Videos of Robot Manipulation using Sampled Reorient Poses
+                  </span></h3>
+                  <br>
+                  <p>
+                    <img alt="reorient1" src="assets/gifs/converted_1.gif" width="45%">
+                    <img alt="reorient2" src="assets/gifs/converted_2.gif" width="45%">
+                  </p>
+                  <p>
+                    <img alt="reorient3" src="assets/gifs/converted_3.gif" width="45%">
+                    <img alt="reorient4" src="assets/gifs/converted_4.gif" width="45%">
+                  </p>
+                  <p>
+                    <img alt="reorient5" src="assets/gifs/converted_5.gif" width="45%">
+                    <img alt="reorient6" src="assets/gifs/converted_6.gif" width="45%">
+                  </p>
+                  <p>
+                    <img alt="reorient7" src="assets/gifs/converted_7.gif" width="45%">
+                    <img alt="reorient8" src="assets/gifs/converted_8.gif" width="45%">
+                  </p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+
+          <div>
+            <div class="container is-max-desktop">
+              <div class="columns is-centered has-text-centered">
+                <div class="column">
+                  <h4 class="title is-4"><span
+                    class="dvima">
+                  </span></h4>
+                  <iframe width="1200" height="800" src="https://www.youtube-nocookie.com/embed/U2l2QQYdoNY?si=d-vd52Kia6a_RtEb" title="ReorientDiff : Diffusion Model based Reorientation for Object Manipulation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+                  </iframe>
+                <br>
+                <br>
+              </div>
+            </div>               
+          </div>
+
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <!-- Generalization Videos -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Contribution</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Contribution-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+          <div class="content has-text-justified">
+          <p style="font-size: 125%">
+            The primary contributions of this work encompass:
+            <ul style="font-size: 125%">
+              <li> The first to explore reorientation poses as conditional distribution and offer a better prior for sampling intermediate poses than rejection sampling with random prior.
+              </li>
+              <li> A framework which incorporates both visual inputs from the scene and goal-specific language prompts to plan intermediate reorientation poses. Based on intuition, the scene and task should be enough to plan the intermediate poses.
+              </li>
+              <li> To address kino-dynamic grasp constraints while inference, we use classifier-guidance using learned feasibility score models to samplke only the valid poses from the learned prior based on feasible grasp poses.
+
+              </li>
+
+            </ul>
+        </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{chen2023sequential, 
+      title={Sequential Dexterity: Chaining Dexterous Policies for Long-Horizon Manipulation},
+      author={Chen, Yuanpei and Wang, Chen and Fei-Fei, Li and Liu, C. Karen},
+      booktitle={Conference on Robot Learning},
+      year={2023}
+    }</code></pre>
+  </div>
+</section> -->
+
+
+</body>
+</html>
